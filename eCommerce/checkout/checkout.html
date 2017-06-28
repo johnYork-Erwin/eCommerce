@@ -8,14 +8,14 @@
   <!-- jQuery -->
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <!-- Compiled JavaScript -->
-  <script src="checkout.js"></script>
+  <script defer src="checkout.js"></script>
   <!-- google's provided icon -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- Compiled CSS -->
   <link rel="stylesheet" href="../materialize.css">
   <link rel="stylesheet" href="checkout.css">
   <!-- Compiled JavaScript -->
-  <script src="materialize.js"></script>
+  <script src="../materialize.js"></script>
 </head>
 
 <body>
@@ -39,14 +39,40 @@
   </nav>
 
   <header>
-    <h3>Checkout</h3>
-    <table>
+    <h3>Checkout Cart</h3>
+    <div class="container">
+      <table>
+        <thead>
+          <tr>
+            <th>Vegetable</th>
+            <th>Quantity</th>
+            <th>Price</th>
+          </tr>
+        </thead>
 
-    </table>
+        <tbody>
+          <tr>
+            <td>Squash</td>
+            <td>4</td>
+            <td>$12.00</td>
+          </tr>
+          <tr>
+            <td>Cabbage</td>
+            <td>8</td>
+            <td>$16.00</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Total</td>
+            <td>$28.00</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </header>
 
   <main>
-
+    <h3>Payment Info</h3>
     <div class="container">
       <form>
         <div class="row browser-default">
@@ -58,6 +84,11 @@
                 <input type="name" placeholder="Last Name" class="validate">
               </div>
             </div>
+            <div>Company
+              <div>
+                <input type="name" placeholder="Company Name" class="validate">
+              </div>
+            </div>
             <div>Address
               <div>
                 <input type="address" placeholder="Street Address" class="validate">
@@ -73,7 +104,9 @@
                 <input type="address" placeholder="Zip Code" class="validate">
               </div>
             </div>
-            <div>My billing address is the same <input id="checkbox" type="checkbox">
+            <div>
+              <input type="checkbox" class="filled-in" id="filled-in-box"/>
+              <label for="filled-in-box">My billing information is the same</label>
             </div>
           </div>
 
@@ -85,6 +118,11 @@
                 <input type="name" placeholder="Last Name" class="validate">
               </div>
             </div>
+            <div>Company
+              <div>
+                <input type="name" placeholder="Company Name" class="validate">
+              </div>
+            </div>
             <div>Address
               <div>
                 <input type="address" placeholder="Street Address" class="validate">
@@ -100,27 +138,60 @@
                 <input type="address" placeholder="Zip Code" class="validate">
               </div>
             </div>
+          </div>
+
+          <div class="col s12 center credit">
             <div>Credit Card Number
               <div>
-                <input type="" placeholder="CC #" class="validate">
+                <input type="" placeholder="####-####-####-####" class="validate">
               </div>
             </div>
-            <div>Expiration
-              <div>
-                <input type="" placeholder="MM" class="validate">
-                <input type="" placeholder="YY" class="validate">
+            <div class="expire">Expiration
+              <div class="expire-inputs">
+              <div class="mm">
+                <select class="browser-default">
+                  <option value="" disabled selected>MM</option>
+                  <option value="01">01</option>
+                  <option value="02">02</option>
+                  <option value="03">03</option>
+                  <option value="04">04</option>
+                  <option value="05">05</option>
+                  <option value="06">06</option>
+                  <option value="07">07</option>
+                  <option value="08">08</option>
+                  <option value="09">09</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                </select>
               </div>
+              <div class="yy">
+                <select class="browser-default">
+                  <option value="" disabled selected>YY</option>
+                  <option value="01">17</option>
+                  <option value="02">18</option>
+                  <option value="03">19</option>
+                  <option value="04">20</option>
+                  <option value="05">21</option>
+                  <option value="06">22</option>
+                  <option value="07">23</option>
+                  <option value="08">24</option>
+                  <option value="09">25</option>
+
+                </select>
+              </div>
+            </div>
             </div>
             <div>CVC
               <div>
-                <input type="" placeholder="CVC" class="validate">
+                <input type="" placeholder="###" class="validate">
               </div>
             </div>
           </div>
         </div>
 
         <div class="row center">
-          <a class="waves-effect waves-light btn">Purchase</a>
+          <a class="waves-effect waves-light btn">Complete Purchase</a>
         </div>
 
       </form>

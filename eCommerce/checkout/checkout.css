@@ -1,0 +1,18 @@
+.credit {
+  margin-top: 40px;
+}
+
+.expire-inputs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mm, .yy {
+  width: 80px;
+  display: inline-block;
+}
+
+h3 {
+  text-align: center;
+}
