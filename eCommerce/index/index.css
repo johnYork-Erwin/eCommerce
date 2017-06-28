@@ -4,3 +4,17 @@
 #cart i {
   align-self: baseline;
 }
+#map {
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjs50jBSbeQCn-Uy0t3HA_RwcuLvLCmSXd853tZ6W4q7lP7MJh);
+  background-size: auto;
+  background-repeat: no-repeat;
+  height: 100px;
+  width: 200px;
+}
+.parentCarousel {
+  background: radial-gradient(ellipse at center, white 0%, #38B1D9 50%);
+  height: 300px;
+}
+body {
+  background-color: #38B1D9;
+}
