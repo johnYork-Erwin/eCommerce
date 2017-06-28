@@ -26,7 +26,7 @@
       <ul class="right hide-on-med-and-down">
         <li><a href="index.html">Homepage</a></li>
         <li><a href="products.html">Products</a></li>
-        <li><a href="checkout.html">Checkout</a></li>
+        <li class="active"><a href="checkout.html">Checkout</a></li>
       </ul>
       <ul class="side-nav" id="mobile-demo">
         <li><a href="index.html">Homepage</a></li>
@@ -37,37 +37,47 @@
 
   </nav>
 
+  <header>
+    <h3>Checkout</h3>
+    <table>
+
+    </table>
+  </header>
+
   <main>
 
-
-    <form>
-      <div class="row browser-default">
-        <div class="billing col s6">
-          <h5>Shipping</h5>
-          <div>Name
-            <div>
-              <input type="name" placeholder="First Name" class="validate">
-              <input type="name" placeholder="Last Name" class="validate">
+    <div class="container">
+      <form>
+        <div class="row browser-default">
+          <div class="billing col s6">
+            <h5>Shipping Information</h5>
+            <div>Name
+              <div>
+                <input type="name" placeholder="First Name" class="validate">
+                <input type="name" placeholder="Last Name" class="validate">
+              </div>
             </div>
-          </div>
-          <div>Address
-            <div>
-              <input type="address" placeholder="Street Address" class="validate">
+            <div>Address
+              <div>
+                <input type="address" placeholder="Street Address" class="validate">
+              </div>
+              <div>
+                <input type="address" placeholder="Apt/Suite" class="validate">
+              </div>
+              <div>
+                <input type="address" placeholder="City Name" class="validate">
+              </div>
+              <div>
+                <input type="address" placeholder="State" class="validate">
+                <input type="address" placeholder="Zip Code" class="validate">
+              </div>
             </div>
-            <div>
-              <input type="address" placeholder="Apt/Suite" class="validate">
-            </div>
-            <div>
-              <input type="address" placeholder="City Name" class="validate">
-            </div>
-            <div>
-              <input type="address" placeholder="State" class="validate">
-              <input type="address" placeholder="Zip Code" class="validate">
+            <div>My billing address is the same <input id="checkbox" type="checkbox">
             </div>
           </div>
 
           <div class="shipping col s6">
-            <h5>Billing</h5>
+            <h5>Billing Information</h5>
             <div>Name
               <div>
                 <input type="name" placeholder="First Name" class="validate">
@@ -107,26 +117,43 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="row center">
-        <a class="waves-effect waves-light btn">Purchase</a>
-      </div>
 
-    </form>
+        <div class="row center">
+          <a class="waves-effect waves-light btn">Purchase</a>
+        </div>
 
-
+      </form>
+    </div>
 
   </main>
 
   <footer class="page-footer">
     <div class="container">
       <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Vegetables!</h5>
-          <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+        <div class="col l3 s12">
+          <h5 class="white-text">Visit Us</h5>
+          <p class="grey-text text-lighten-4">Put a map right here</p>
         </div>
-        <div class="col l4 offset-l2 s12">
+        <div class="col l3 s12">
+          <h5 class="white-text">On Sale</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="#!">Veggie 1</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Veggie 2</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Veggie 3</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Veggie 4</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
           <h5 class="white-text">Links</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">More Links</h5>
           <ul>
             <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
             <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
