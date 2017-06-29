@@ -3,10 +3,13 @@ $(document).ready(function() {
   $('select').material_select();
 });
 
+//dynamically generates the Checkout table
+console.log(products);
+console.log(orderedProducts);
+
+
 
 const inputNames = ['firstNameShip', 'lastNameShip', 'companyShip', 'addressShip', 'aptShip', 'cityShip', 'zipShip']
-
-
 
 //this copies the shipping info into billing info
 const checkbox = $('#filled-in-box');
