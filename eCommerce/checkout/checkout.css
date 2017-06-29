@@ -25,3 +25,12 @@ h3 {
   height: 100px;
   width: 200px;
 }
+
+.total {
+  font-weight: bold;
+}
+
+.checkout-table {
+  width: 400px;
+  margin: auto;
+}
