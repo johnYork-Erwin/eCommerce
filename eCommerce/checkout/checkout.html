@@ -75,34 +75,38 @@
   <main>
     <h3>Payment Info</h3>
     <div class="container">
-      <form>
+      <form novalidate>
         <div class="row browser-default">
           <div class="billing col s6">
             <h5>Shipping Information</h5>
             <div>Name
               <div>
-                <input type="name" placeholder="First Name" class="validate">
-                <input type="name" placeholder="Last Name" class="validate">
+                <input type="name" placeholder="First Name" name="firstNameShip" class="validate">
+                <input type="name" placeholder="Last Name" class="validate" name="lastNameShip">
               </div>
             </div>
             <div>Company
               <div>
-                <input type="name" placeholder="Company Name" class="validate">
+                <input type="name" placeholder="Company Name" name="companyShip">
               </div>
             </div>
             <div>Address
               <div>
-                <input type="address" placeholder="Street Address" class="validate">
+                <input type="address" placeholder="Street Address" class="validate" name="addressShip">
               </div>
               <div>
-                <input type="address" placeholder="Apt/Suite" class="validate">
+                <input type="address" placeholder="Apt/Suite" name="aptShip">
               </div>
               <div>
-                <input type="address" placeholder="City Name" class="validate">
+                <input type="address" placeholder="City Name" class="validate" name="cityShip">
               </div>
               <div>
-                <input type="address" placeholder="State" class="validate">
-                <input type="address" placeholder="Zip Code" class="validate">
+                <select class="browser-default state" name="stateShip">
+                  <option value="" disabled selected>State</option>
+                  
+                </select>
+
+                <input type="address" placeholder="Zip Code" class="zip" name="zipShip">
               </div>
             </div>
             <div>
@@ -115,28 +119,32 @@
             <h5>Billing Information</h5>
             <div>Name
               <div>
-                <input type="name" placeholder="First Name" class="validate">
-                <input type="name" placeholder="Last Name" class="validate">
+                <input type="name" placeholder="First Name" class="validate" name="firstNameBill">
+                <input type="name" placeholder="Last Name" class="validate" name="lastNameBill">
               </div>
             </div>
             <div>Company
               <div>
-                <input type="name" placeholder="Company Name" class="validate">
+                <input type="name" placeholder="Company Name" name="companyBill">
               </div>
             </div>
             <div>Address
               <div>
-                <input type="address" placeholder="Street Address" class="validate">
+                <input type="address" placeholder="Street Address" class="validate" name="addressBill">
               </div>
               <div>
-                <input type="address" placeholder="Apt/Suite" class="validate">
+                <input type="address" placeholder="Apt/Suite" name="aptBill">
               </div>
               <div>
-                <input type="address" placeholder="City Name" class="validate">
+                <input type="address" placeholder="City Name" class="validate" name="cityBill">
               </div>
               <div>
-                <input type="address" placeholder="State" class="validate">
-                <input type="address" placeholder="Zip Code" class="validate">
+                <select class="browser-default state" name="stateBill">
+                  <option value="" disabled selected>State</option>
+
+                </select>
+
+                <input type="address" placeholder="Zip Code" class="zip" name="zipBill">
               </div>
             </div>
           </div>
@@ -144,13 +152,13 @@
           <div class="col s12 center credit">
             <div>Credit Card Number
               <div>
-                <input type="" placeholder="####-####-####-####" class="validate">
+                <input type="" placeholder="####-####-####-####" name="cc">
               </div>
             </div>
             <div class="expire">Expiration
               <div class="expire-inputs">
               <div class="mm">
-                <select class="browser-default">
+                <select class="browser-default" name="mm">
                   <option value="" disabled selected>MM</option>
                   <option value="01">01</option>
                   <option value="02">02</option>
@@ -167,7 +175,7 @@
                 </select>
               </div>
               <div class="yy">
-                <select class="browser-default">
+                <select class="browser-default" name="yy">
                   <option value="" disabled selected>YY</option>
                   <option value="01">17</option>
                   <option value="02">18</option>
@@ -178,21 +186,20 @@
                   <option value="07">23</option>
                   <option value="08">24</option>
                   <option value="09">25</option>
-
                 </select>
               </div>
             </div>
             </div>
             <div>CVC
               <div>
-                <input type="" placeholder="###" class="validate">
+                <input type="" placeholder="###" class="validate" name="cvc">
               </div>
             </div>
           </div>
         </div>
 
         <div class="row center">
-          <a class="waves-effect waves-light btn">Complete Purchase</a>
+          <button class="waves-effect waves-light btn" type="submit">Complete Purchase</button>
         </div>
 
       </form>
