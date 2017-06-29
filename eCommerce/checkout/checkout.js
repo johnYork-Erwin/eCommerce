@@ -6,7 +6,8 @@ $(document).ready(function() {
 //dynamically generates the Checkout table
 console.log(products);
 console.log(orderedProducts);
-
+const cartButton = $('#cart');
+cartButton.text('more text')
 
 
 const inputNames = ['firstNameShip', 'lastNameShip', 'companyShip', 'addressShip', 'aptShip', 'cityShip', 'zipShip']
