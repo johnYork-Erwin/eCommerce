@@ -100,8 +100,12 @@
                 <input type="address" placeholder="City Name" class="validate" name="cityShip">
               </div>
               <div>
-                <input type="address" placeholder="State" class="validate" name="stateShip">
-                <input type="address" placeholder="Zip Code" class="validate" name="zipShip">
+                <select class="browser-default state" name="stateShip">
+                  <option value="" disabled selected>State</option>
+                  
+                </select>
+
+                <input type="address" placeholder="Zip Code" class="zip" name="zipShip">
               </div>
             </div>
             <div>
@@ -134,8 +138,12 @@
                 <input type="address" placeholder="City Name" class="validate" name="cityBill">
               </div>
               <div>
-                <input type="address" placeholder="State" class="validate" name="stateBill">
-                <input type="address" placeholder="Zip Code" class="validate" name="zipBill">
+                <select class="browser-default state" name="stateBill">
+                  <option value="" disabled selected>State</option>
+
+                </select>
+
+                <input type="address" placeholder="Zip Code" class="zip" name="zipBill">
               </div>
             </div>
           </div>
@@ -143,7 +151,7 @@
           <div class="col s12 center credit">
             <div>Credit Card Number
               <div>
-                <input type="" placeholder="####-####-####-####" class="validate" name="cc">
+                <input type="" placeholder="####-####-####-####" name="cc">
               </div>
             </div>
             <div class="expire">Expiration
