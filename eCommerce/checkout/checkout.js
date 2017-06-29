@@ -1,3 +1,5 @@
+orderedProducts = JSON.parse(localStorage.getItem('orderedProducts'));
+
 //materialize initialization for 'select'
 $(document).ready(function() {
   $('select').material_select();

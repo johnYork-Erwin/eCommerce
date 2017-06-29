@@ -10,6 +10,7 @@ const addButtonListeners = function() {
       if (product['name'].toLowerCase() === name) {
         console.log(orderedProducts);
         orderedProducts.push(product);
+        localStorage.setItem('orderedProducts', JSON.stringify(orderedProducts));
         console.log(orderedProducts);
         return;
       }
