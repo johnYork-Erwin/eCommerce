@@ -12,3 +12,5 @@ const products = [
 ];
 
 var orderedProducts = [];
+
+var cartSize = orderedProducts.length();

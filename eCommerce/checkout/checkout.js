@@ -6,8 +6,6 @@ $(document).ready(function() {
 });
 
 //dynamically generates the Checkout table
-console.log(products);
-console.log(orderedProducts);
 
 
 
