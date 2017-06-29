@@ -24,3 +24,7 @@ h3 {
   height: 100px;
   width: 200px;
 }
+
+input:invalid {
+  background-color: #ffdddd;
+}
