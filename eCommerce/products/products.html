@@ -7,16 +7,18 @@
     <!-- jQuery -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <!-- Compiled JavaScript -->
+    <script src="../materialize.js"></script>
+    <!-- Compiled JavaScript -->
+    <script src="../productObject.js"></script>
     <script defer src="products.js"></script>
     <!-- google's provided icon -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Compiled CSS -->
     <link rel="stylesheet" href="../materialize.css">
     <link rel="stylesheet" href="products.css">
-    <!-- Compiled JavaScript -->
-    <script src="../materialize.js"></script>
   </head>
   <body>
+    <!-- nav bar -->
     <nav>
       <div class="nav-wrapper brown">
         <a href="#!" class="brand-logo">Vegetables!</a>
@@ -35,12 +37,46 @@
         </ul>
       </div>
     </nav>
-    <main>
 
+    <main class="container">
+      <h3 class="center">Vegetables</h3>
 
+        <div id="priceCriteria" class="valign-wrapper row">
+          <div class="col l4">
+            <h5 class="center">Click your highest desired price</h5>
+          </div>
+          <div class="col l2">
+            <a class="waves-effect waves-light btn">$3.99</a>
+          </div>
+          <div class="col l2">
+            <a class="waves-effect waves-light btn">$6.99</a>
+          </div>
+          <div class="col l2">
+            <a class="waves-effect waves-light btn">$10.99</a>
+          </div>
+        </div>
+        <div id="ratingCriteria" class="valign-wrapper row">
+          <div class="col l4">
+            <h5 class="center">Click your lowest desired rating</h5>
+          </div>
+          <div class="col l2">
+            <a class="waves-effect waves-light btn">3/5</a>
+          </div>
+          <div class="col l2">
+            <a class="waves-effect waves-light btn">4/5</a>
+          </div>
+          <div class="col l2">
+            <a class="waves-effect waves-light btn">5/5</a>
+          </div>
+        </div>
 
+        <!-- populated by JS -->
+        <div id="salesList">
+
+        </div>
 
     </main>
+    <!-- Foooooter -->
     <footer class="page-footer">
       <div class="container">
         <div class="row">
