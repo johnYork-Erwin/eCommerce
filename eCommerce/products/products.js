@@ -1,21 +1,16 @@
 let $list = $('#salesList');
 let criteria = {'price':Infinity, 'rating':0};
 
-orderedProducts = JSON.parse(localStorage.getItem('orderedProducts'));
-
-
-
 //Add to cart button, function that adds to cart is specific to card layout on this page
 const addButtonListeners = function() {
   $('.btn-floating').on('click', function() {
+    cartButton.text(orderedProducts.length+1 + ' Items in Cart');
     let name = event.target.parentElement.parentElement.innerText.toLowerCase().slice(0, -4);
     console.log(name);
     products.forEach(function(product) {
       if (product['name'].toLowerCase() === name) {
         orderedProducts.push(product);
         localStorage.setItem('orderedProducts', JSON.stringify(orderedProducts));
-
-        cartButton.text(orderedProducts.length + ' Items in Cart');
         return;
       }
     });

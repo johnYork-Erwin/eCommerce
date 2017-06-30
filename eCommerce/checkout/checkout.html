@@ -8,7 +8,7 @@
   <!-- jQuery -->
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <!-- Compiled JavaScript -->
-  <script src="../productObject.js"></script>
+  <script defer src="../productObject.js"></script>
   <script defer src="checkout.js"></script>
   <!-- google's provided icon -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -29,7 +29,7 @@
         <li><a href="../index/index.html">Homepage</a></li>
         <li><a href="../products/products.html">Products</a></li>
         <li class="active"><a href="checkout.html">Checkout</a></li>
-        <li><a id="cart" href="../checkout/checkout.html" class="waves-effect waves-light btn"><i class="material-icons left">shopping_cart</i>Items In Checkout</a></li>
+        <li><a id="cart" href="../checkout/checkout.html" class="waves-effect waves-light btn"></a></li>
       </ul>
       <ul class="side-nav" id="mobile-demo">
         <li><a href="../index/index.html">Homepage</a></li>
@@ -42,7 +42,7 @@
 
   <header>
     <h3>Checkout Cart</h3>
-    <div class="container">
+    <div class="container center-align">
       <table class="checkout-table">
         <thead>
           <tr>
@@ -64,6 +64,7 @@
           </tr>
         </tfoot>
       </table>
+      <a id="clear" class="center waves-effect waves-light btn">Clear Cart</a>
     </div>
   </header>
 

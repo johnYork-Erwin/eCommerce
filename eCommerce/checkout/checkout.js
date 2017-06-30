@@ -1,5 +1,3 @@
-orderedProducts = JSON.parse(localStorage.getItem('orderedProducts'));
-
 renderShoppingCart();
 
 function renderShoppingCart() {
@@ -14,14 +12,15 @@ function renderShoppingCart() {
   let total = orderedProducts.reduce(function(acc, product) {
     return acc + product['price'];
   }, 0);
-  $('#total').text('$'+total);
+  $('#total').text('$'+total.toFixed(2));
 };
 
 function clearBasket() {
   orderedProducts = [];
-  localStorage.setItem('orderedProducts', JSON.stringify(orderedProducts);
+  localStorage.setItem('orderedProducts', JSON.stringify(orderedProducts));
   $('#shopBody').empty();
   $('#total').text('Add something to cart!');
+  cartButton.text(orderedProducts.length + ' Items in Cart');
 }
 
 //materialize initialization for 'select'
@@ -33,9 +32,12 @@ $(document).ready(function() {
 
 console.log(products);
 console.log(orderedProducts);
-const cartButton = $('#cart');
-cartButton.text(cartSize + 'more text')
+// const cartButton = $('#cart');
+cartButton.text(cartSize + 'ITEMS IN CART!')
 
+$('#clear').on('click', function() {
+  clearBasket();
+});
 
 
 const inputNames = ['firstNameShip', 'lastNameShip', 'companyShip', 'addressShip', 'aptShip', 'cityShip', 'zipShip']
@@ -136,6 +138,7 @@ $('form').on('submit', (event) => {
 //creates toasts
   if (validity) {
     Materialize.toast('Thank you for your order!', 4000);
+    clearBasket();
   } else {
     Materialize.toast('Not valid! Please enter required fields', 4000);
   }
