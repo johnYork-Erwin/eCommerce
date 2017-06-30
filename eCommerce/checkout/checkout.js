@@ -17,6 +17,13 @@ function renderShoppingCart() {
   $('#total').text('$'+total);
 };
 
+function clearBasket() {
+  orderedProducts = [];
+  localStorage.setItem('orderedProducts', JSON.stringify(orderedProducts);
+  $('#shopBody').empty();
+  $('#total').text('Add something to cart!');
+}
+
 //materialize initialization for 'select'
 $(document).ready(function() {
   $('select').material_select();
@@ -154,7 +161,7 @@ states.forEach((stateName) => {
   optionValue++;
   const optionShip = $('<option>');
   optionShip.text(stateName).attr('value', optionValue);
-  const optionBill = optionShip.clone()
+  const optionBill = optionShip.clone();
   selectStateShip.append(optionShip);
   selectStateBill.append(optionBill);
 });
