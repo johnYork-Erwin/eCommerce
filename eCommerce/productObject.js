@@ -13,4 +13,4 @@ const products = [
 
 var orderedProducts = [];
 
-var cartSize = orderedProducts.length();
+var cartSize = orderedProducts.length;

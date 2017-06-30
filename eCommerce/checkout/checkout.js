@@ -1,5 +1,22 @@
 orderedProducts = JSON.parse(localStorage.getItem('orderedProducts'));
 
+renderShoppingCart();
+
+function renderShoppingCart() {
+  //populates the receipt
+  let $shopBody = $('#shopBody');
+  orderedProducts.forEach(function(product) {
+    let $row = $('<tr>');
+    $row.append($('<td>').text(product['name'])).append($('<td>')).append($('<td>').addClass('right').text('$' + product['price']));
+    $shopBody.append($row);
+  });
+  //finds and appends the total
+  let total = orderedProducts.reduce(function(acc, product) {
+    return acc + product['price'];
+  }, 0);
+  $('#total').text('$'+total);
+};
+
 //materialize initialization for 'select'
 $(document).ready(function() {
   $('select').material_select();
@@ -124,7 +141,6 @@ $('form').on('submit', (event) => {
 //dynamically adds states
 const states = ['CA', 'ID', 'MT', 'OR', 'WA'];
 const selectStateShip = $('select[name="stateShip"]');
-console.log(selectStateShip);
 const selectStateBill = $('select[name="stateBill"]');
 //create an option tag, add state from array as text,
 //add a value that increases each time, then append each option tag to both select fields
