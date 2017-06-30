@@ -1,125 +1,129 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>VEGETABLES</title>
-    <!-- jQuery -->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <!-- Compiled JavaScript -->
-    <script src="../materialize.js"></script>
-    <!-- Compiled JavaScript -->
-    <script src="../productObject.js"></script>
-    <script defer src="products.js"></script>
-    <!-- google's provided icon -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- Compiled CSS -->
-    <link rel="stylesheet" href="../materialize.css">
-    <link rel="stylesheet" href="products.css">
-  </head>
-  <body>
-    <!-- nav bar -->
-    <nav>
-      <div class="nav-wrapper brown">
-        <a href="#!" class="brand-logo">Vegetables!</a>
-        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-        <ul class="right hide-on-med-and-down valign-wrapper">
-          <li><a href="../index/index.html">Homepage</a></li>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="../checkout/checkout.html">Checkout</a></li>
-          <li><a id="cart" href="../checkout/checkout.html" class="waves-effect waves-light btn"><i class="material-icons left">shopping_cart</i>Items In Checkout</a></li>
-        </ul>
-        <ul class="side-nav" id="mobile-demo">
-          <li><a href="../index/index.html">Homepage</a></li>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="../checkout/checkout.html">Checkout</a></li>
-          <li><a href="../checkout/checkout.html" class="waves-effect waves-light btn">Items In Checkout</a></li>
-        </ul>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VEGETABLES</title>
+  <!-- jQuery -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <!-- Compiled JavaScript -->
+  <script src="../materialize.js"></script>
+  <!-- Compiled JavaScript -->
+  <script src="../productObject.js"></script>
+  <script defer src="products.js"></script>
+  <!-- google's provided icon -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled CSS -->
+  <link rel="stylesheet" href="../materialize.css">
+  <link rel="stylesheet" href="products.css">
+</head>
+
+<body>
+  <!-- nav bar -->
+  <nav>
+    <div class="nav-wrapper brown">
+      <a href="#!" class="brand-logo">Vegetables!</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down valign-wrapper">
+        <li><a href="../index/index.html">Homepage</a></li>
+        <li class="active"><a href="products.html">Products</a></li>
+        <li><a href="../checkout/checkout.html">Checkout</a></li>
+        <li><a id="cart" href="../checkout/checkout.html" class="waves-effect waves-light btn"><i class="material-icons left">shopping_cart</i>Items In Checkout</a></li>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li><a href="../index/index.html">Homepage</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="../checkout/checkout.html">Checkout</a></li>
+        <li><a href="../checkout/checkout.html" class="waves-effect waves-light btn">Items In Checkout</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <h3 class="center">Vegetables</h3>
+
+    <div id="priceCriteria" class="valign-wrapper row">
+      <div class="col l4">
+        <h5 class="center">Click your highest desired price</h5>
       </div>
-    </nav>
+      <div class="col l2">
+        <a class="waves-effect waves-light btn">$3.99</a>
+      </div>
+      <div class="col l2">
+        <a class="waves-effect waves-light btn">$6.99</a>
+      </div>
+      <div class="col l2">
+        <a class="waves-effect waves-light btn">$10.99</a>
+      </div>
+    </div>
+    <div id="ratingCriteria" class="valign-wrapper row">
+      <div class="col l4">
+        <h5 class="center">Click your lowest desired rating</h5>
+      </div>
+      <div class="col l2">
+        <a class="waves-effect waves-light btn">3/5</a>
+      </div>
+      <div class="col l2">
+        <a class="waves-effect waves-light btn">4/5</a>
+      </div>
+      <div class="col l2">
+        <a class="waves-effect waves-light btn">5/5</a>
+      </div>
+    </div>
 
-    <main class="container">
-      <h3 class="center">Vegetables</h3>
+    <!-- populated by JS -->
+    <div id="salesList">
 
-        <div id="priceCriteria" class="valign-wrapper row">
-          <div class="col l4">
-            <h5 class="center">Click your highest desired price</h5>
-          </div>
-          <div class="col l2">
-            <a class="waves-effect waves-light btn">$3.99</a>
-          </div>
-          <div class="col l2">
-            <a class="waves-effect waves-light btn">$6.99</a>
-          </div>
-          <div class="col l2">
-            <a class="waves-effect waves-light btn">$10.99</a>
+    </div>
+
+  </main>
+  <!-- Foooooter -->
+  <footer class="page-footer brown">
+    <div class="container">
+      <div class="row">
+        <div class="col l3 s12">
+          <h5 class="white-text">Visit Us</h5>
+          <div id="map">
           </div>
         </div>
-        <div id="ratingCriteria" class="valign-wrapper row">
-          <div class="col l4">
-            <h5 class="center">Click your lowest desired rating</h5>
-          </div>
-          <div class="col l2">
-            <a class="waves-effect waves-light btn">3/5</a>
-          </div>
-          <div class="col l2">
-            <a class="waves-effect waves-light btn">4/5</a>
-          </div>
-          <div class="col l2">
-            <a class="waves-effect waves-light btn">5/5</a>
-          </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">On Sale</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="#!">Beets</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Carrots</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!"></a></li>
+            <li><a class="grey-text text-lighten-3" href="#!"></a></li>
+          </ul>
         </div>
-
-        <!-- populated by JS -->
-        <div id="salesList">
-
+        <div class="col l3 s12">
+          <h5 class="white-text">Links</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" target="_blank" href="https://www.amazon.com/Best-Sellers-Books-Vegetarian-Vegan/zgbs/books/4336">Veggie Cookbooks</a></li>
+            <li><a class="grey-text text-lighten-3" target="_blank" href="http://www.rachaelray.com/">Rachael Ray</a></li>
+            <li><a class="grey-text text-lighten-3" target="_blank" href="http://www.foodnetwork.com/shows/iron-chef-america">Iron Chef</a></li>
+            <li><a class="grey-text text-lighten-3" href=""></a></li>
+          </ul>
         </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">More Links</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="../index/index.html">Homepage</a></li>
+            <li><a class="grey-text text-lighten-3" href="../products/products.html">Products</a></li>
+            <li><a class="grey-text text-lighten-3" href="checkout.html">Checkout</a></li>
 
-    </main>
-    <!-- Foooooter -->
-    <footer class="page-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col l3 s12">
-            <h5 class="white-text">Visit Us</h5>
-            <div id="map">
-            </div>
-          </div>
-          <div class="col l3 s12">
-            <h5 class="white-text">On Sale</h5>
-            <ul>
-              <li><a class="grey-text text-lighten-3" href="#!">Veggie 1</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Veggie 2</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Veggie 3</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Veggie 4</a></li>
-            </ul>
-          </div>
-          <div class="col l3 s12">
-            <h5 class="white-text">Links</h5>
-            <ul>
-              <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-            </ul>
-          </div>
-          <div class="col l3 s12">
-            <h5 class="white-text">More Links</h5>
-            <ul>
-              <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-            </ul>
-          </div>
-        </div>
-      <div class="footer-copyright">
-        <div class="container">
-          © 2014 Copyright Text
-          <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+          </ul>
         </div>
       </div>
     </div>
-    </footer>
-  </body>
+    <div class="footer-copyright">
+      <div class="container">
+        © 2017 John and Brian
+        <a class="grey-text text-lighten-4 right" href="#!">vegetables are dope</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
 </html>
