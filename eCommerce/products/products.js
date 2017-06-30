@@ -3,6 +3,8 @@ let criteria = {'price':Infinity, 'rating':0};
 
 orderedProducts = JSON.parse(localStorage.getItem('orderedProducts'));
 
+
+
 //Add to cart button, function that adds to cart is specific to card layout on this page
 const addButtonListeners = function() {
   $('.btn-floating').on('click', function() {
@@ -12,6 +14,8 @@ const addButtonListeners = function() {
       if (product['name'].toLowerCase() === name) {
         orderedProducts.push(product);
         localStorage.setItem('orderedProducts', JSON.stringify(orderedProducts));
+
+        cartButton.text(orderedProducts.length + ' Items in Cart');
         return;
       }
     });

@@ -13,4 +13,9 @@ const products = [
 
 var orderedProducts = [];
 
+<<<<<<< HEAD
 var cartSize = orderedProducts.length;
+=======
+const cartButton = $('#cart');
+cartButton.text(orderedProducts.length + ' Items in Cart');
+>>>>>>> b2681957923d73125f87177fb521a787e3cf92d4
