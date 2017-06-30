@@ -52,8 +52,7 @@ $(document).ready(function() {
 console.log(products);
 console.log(orderedProducts);
 // const cartButton = $('#cart');
-cartButton.text(cartSize + 'ITEMS IN CART!');
-cartButton.text(cartSize + 'more text');
+cartButton.text(cartSize + ' ITEMS IN CART');
 
 $('#clear').on('click', function() {
   clearBasket();
