@@ -1,3 +1,22 @@
+const inputNames = ['firstNameShip', 'lastNameShip', 'companyShip', 'addressShip', 'aptShip', 'cityShip', 'zipShip']
+const checkbox = $('#filled-in-box');
+
+const states = ['CA', 'ID', 'MT', 'OR', 'WA'];
+const selectStateShip = $('select[name="stateShip"]');
+const selectStateBill = $('select[name="stateBill"]');
+//dynamically adds states
+let optionValue = 0;
+states.forEach((stateName) => {
+  optionValue++;
+  const optionShip = $('<option>');
+  optionShip.text(stateName).attr('value', optionValue);
+  const optionBill = optionShip.clone();
+  selectStateShip.append(optionShip);
+  selectStateBill.append(optionBill);
+});
+
+
+orderedProducts = JSON.parse(localStorage.getItem('orderedProducts'));
 renderShoppingCart();
 
 function renderShoppingCart() {
@@ -23,7 +42,7 @@ function clearBasket() {
   cartButton.text(orderedProducts.length + ' Items in Cart');
 }
 
-//materialize initialization for 'select'
+//materialize initialization for 'select' inputs
 $(document).ready(function() {
   $('select').material_select();
 });
@@ -33,18 +52,16 @@ $(document).ready(function() {
 console.log(products);
 console.log(orderedProducts);
 // const cartButton = $('#cart');
-cartButton.text(cartSize + 'ITEMS IN CART!')
+cartButton.text(cartSize + 'ITEMS IN CART!');
+cartButton.text(cartSize + 'more text');
 
 $('#clear').on('click', function() {
   clearBasket();
 });
 
 
-const inputNames = ['firstNameShip', 'lastNameShip', 'companyShip', 'addressShip', 'aptShip', 'cityShip', 'zipShip']
 
 //this copies the shipping info into billing info
-const checkbox = $('#filled-in-box');
-
 checkbox.on('click', (event) => {
 
   const state = $('select[name="stateShip"]');
@@ -72,7 +89,7 @@ checkbox.on('click', (event) => {
 });
 
 
-//form validation
+//form validation - one big click event
 $('form').on('submit', (event) => {
   event.preventDefault();
 
@@ -150,21 +167,4 @@ $('form').on('submit', (event) => {
   if (ccValid === false) {
     Materialize.toast('Enter a proper credit card number!', 4000);
   }
-});
-
-
-//dynamically adds states
-const states = ['CA', 'ID', 'MT', 'OR', 'WA'];
-const selectStateShip = $('select[name="stateShip"]');
-const selectStateBill = $('select[name="stateBill"]');
-//create an option tag, add state from array as text,
-//add a value that increases each time, then append each option tag to both select fields
-let optionValue = 0;
-states.forEach((stateName) => {
-  optionValue++;
-  const optionShip = $('<option>');
-  optionShip.text(stateName).attr('value', optionValue);
-  const optionBill = optionShip.clone();
-  selectStateShip.append(optionShip);
-  selectStateBill.append(optionBill);
 });
