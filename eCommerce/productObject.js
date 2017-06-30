@@ -12,3 +12,6 @@ const products = [
 ];
 
 var orderedProducts = [];
+
+const cartButton = $('#cart');
+cartButton.text(orderedProducts.length + ' Items in Cart');

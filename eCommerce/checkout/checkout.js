@@ -1,13 +1,17 @@
+orderedProducts = JSON.parse(localStorage.getItem('orderedProducts'));
+
 //materialize initialization for 'select'
 $(document).ready(function() {
   $('select').material_select();
 });
 
-//dynamically generates the Checkout table
+//dynamically generates the Checkout
+
 console.log(products);
 console.log(orderedProducts);
 const cartButton = $('#cart');
-cartButton.text('more text')
+cartButton.text(cartSize + 'more text')
+
 
 
 const inputNames = ['firstNameShip', 'lastNameShip', 'companyShip', 'addressShip', 'aptShip', 'cityShip', 'zipShip']

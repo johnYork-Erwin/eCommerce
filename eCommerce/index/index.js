@@ -1,3 +1,5 @@
+orderedProducts = JSON.parse(localStorage.getItem('orderedProducts'));
+
 $(document).ready(function(){
      $('.carousel').carousel();
    });
@@ -15,4 +17,18 @@ $('#submitEmail').on('click', function() {
   } else {
     Materialize.toast('Oh no! That is not an email address we can reach you at...', 4000);
   }
+});
+
+$('.btn-floating').on('click', function() {
+  let name = event.target.parentElement.parentElement.parentElement.children[1].children[0].innerText;
+  name = name.split(' ')[0];
+  name = name.slice(0, -1).toLowerCase();
+  products.forEach(function(product) {
+    if (product['name'].toLowerCase() === name) {
+      orderedProducts.push(product);
+      localStorage.setItem('orderedProducts', JSON.stringify(orderedProducts));
+      return;
+    }
+  });
+
 });
