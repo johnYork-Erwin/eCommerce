@@ -13,8 +13,14 @@ const products = [
 
 var orderedProducts = [];
 orderedProducts = JSON.parse(localStorage.getItem('orderedProducts'));
+if (orderedProducts === null) {
+  orderedProducts = [];
+}
 
-var cartSize = orderedProducts.length;
+var cartSize;
+if (orderedProducts !== null) {
+  cartSize = orderedProducts.length;
+}
 
 const cartButton = $('#cart');
-cartButton.text(orderedProducts.length + ' Items in Cart');
+cartButton.text(cartSize + ' Items in Cart');

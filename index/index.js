@@ -18,7 +18,7 @@ $('#submitEmail').on('click', function() {
 });
 
 $('.btn-floating').on('click', function() {
-  cartButton.text(orderedProducts.length+1 + ' Items in Cart');
+  cartButton.text(orderedProducts.lengt+1 + ' Items in Cart');
   let name = event.target.parentElement.parentElement.parentElement.children[1].children[0].innerText;
   name = name.split(' ')[0];
   name = name.slice(0, -1).toLowerCase();
@@ -26,7 +26,6 @@ $('.btn-floating').on('click', function() {
     if (product['name'].toLowerCase() === name) {
       orderedProducts.push(product);
       localStorage.setItem('orderedProducts', JSON.stringify(orderedProducts));
-      console.log(orderedProducts.length);
       return;
     }
   });
