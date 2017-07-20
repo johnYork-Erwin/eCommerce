@@ -11,8 +11,7 @@ const products = [
   {'name':'Artichoke', 'price':8.99, 'rating':7, 'description':'Confuse your guests with this flower vegetable!', 'image':'http://www.vegetables.co.nz/assets/vegetables/_resampled/FillWyI0MDAiLCIzMDAiXQ/artichokes-globe.png'}
 ];
 
-var orderedProducts = [];
-orderedProducts = JSON.parse(localStorage.getItem('orderedProducts'));
+var orderedProducts = JSON.parse(localStorage.getItem('orderedProducts'));
 if (orderedProducts === null) {
   orderedProducts = [];
 }

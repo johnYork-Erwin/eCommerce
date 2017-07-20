@@ -18,7 +18,6 @@ $('#submitEmail').on('click', function() {
 });
 
 $('.btn-floating').on('click', function() {
-  cartButton.text(orderedProducts.lengt+1 + ' Items in Cart');
   let name = event.target.parentElement.parentElement.parentElement.children[1].children[0].innerText;
   name = name.split(' ')[0];
   name = name.slice(0, -1).toLowerCase();
@@ -29,5 +28,5 @@ $('.btn-floating').on('click', function() {
       return;
     }
   });
-
+  cartButton.text(orderedProducts.length + ' Items in Cart');
 });
