@@ -1,3 +1,7 @@
+// COMMENT: Please remove all console.log() from your submitted code.
+// COMMENT: Separate your code that will immediately execute from your functions
+
+
 const inputNames = ['firstNameShip', 'lastNameShip', 'companyShip', 'addressShip', 'aptShip', 'cityShip', 'zipShip']
 const checkbox = $('#filled-in-box');
 

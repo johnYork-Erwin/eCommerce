@@ -18,6 +18,8 @@ $('#submitEmail').on('click', function() {
 });
 
 $('.btn-floating').on('click', function() {
+  // COMMENT: The following line of code would be better if you directly selected it,
+  // as opposed to using a relative path from the event target.
   let name = event.target.parentElement.parentElement.parentElement.children[1].children[0].innerText;
   name = name.split(' ')[0];
   name = name.slice(0, -1).toLowerCase();
